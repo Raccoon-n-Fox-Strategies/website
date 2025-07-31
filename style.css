@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Victor Mono", monospace;
+}
+
+.sha-xl{
+  @apply shadow-[0_8px_0_rgba(0,0,0,1)] border-2;
+}
+.sha-lg{
+  @apply shadow-[0_5px_0_rgba(0,0,0,1)] border-2;
+}
+.sha-md{
+  @apply shadow-[0_3px_0_rgba(0,0,0,1)] border-2;
+}
+
+.nav-link{
+  @apply border-2 border-black rounded-xl py-1.5 min-w-24 text-center cursor-pointer duration-100 bg-white px-3.5 tracking-wider;
+}
+.nav-link:hover{
+  @apply bg-orange-200;
+}
+.nav-link:active{
+  @apply shadow-[0_1px_0_rgba(0,0,0,1)] translate-y-[3px];
+}
+
+.main-card{
+  @apply h-screen w-screen pt-[17vh] px-12;
+}
+
+#home-container-right{
+  background-image: url(./assets/images/img1.webp);
+  background-position: top;
+  background-size: cover;
+}
+
+@keyframes bouncer {
+  0% {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 1);
+  }
+  8% {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 0 rgba(0, 0, 0, 1);
+  }
+  25% {
+    transform: translateY(0px);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 1);
+  }
+  50% {
+    transform: translateY(0px);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 1);
+  }
+  100% {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 1);
+  }
+}
+
+.gradient-background {
+  background: linear-gradient(114deg,#ffe5b4,#ffffff,#ccfbf1);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-background-2 {
+  background: linear-gradient(114deg,#fed7aa,#fef9c3,#99f6e4);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#copywriting-quote:active, #landingpage-quote:active, #home-cta:active {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 1);
+  transform: translateY(3px);
+}
+
+#about-container-left-img{
+  background-image: url(./assets/images/Rnf_logo.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-link:hover {
+  @apply text-orange-500 tracking-wide;
+}
