@@ -16,7 +16,7 @@
 }
 
 .nav-link{
-  @apply border-2 border-black rounded-xl py-1.5 min-w-24 text-center cursor-pointer duration-100 bg-white px-3.5 tracking-wider;
+  @apply border-2 border-black rounded-xl py-3 sm:py-1.5 text-center cursor-pointer duration-100 bg-white px-3 sm:px-4 tracking-wider;
 }
 .nav-link:hover{
   @apply bg-orange-200;
