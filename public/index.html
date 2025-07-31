@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>Document</title>
-  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="./output.css">
 </head>
 <body class="font-mono">
   <header>
@@ -108,9 +108,9 @@
     </section>
 
     <section id="contact" class="main-card">
-      <div id="contact-container" class="h-[70vh] border-2 w-full sha-lg rounded-4xl bg-white flex">
+      <div id="contact-container" class="h-[70vh] border-2 w-full sha-lg rounded-4xl bg-teal-100 flex">
         <div id="contact-container-left" class="w-1/2 h-full p-8 flex flex-col justify-center">
-          <div id="contact-container-left-text" class="sha-lg rounded-2xl p-8">
+          <div id="contact-container-left-text" class="sha-lg rounded-2xl p-8 bg-white">
             <p class="text-5xl font-bold mb-6">Contact Us</p>
             <p class="text-lg font-semibold mb-2">Ph: <a href="tel:+919008663018" class="contact-link duration-150">+91 9008663018</a> / <a href="tel:+919007195462" class="contact-link duration-150">+91 9007195462</a> <i class="fa-solid fa-phone"></i></p>
             <p class="text-lg font-semibold mb-4">Email: <a href="mailto:rnf.strategies@gmail.com" class="contact-link duration-150">rnf.strategies@gmail.com</a> <i class="fa-solid fa-envelope"></i></p>
@@ -118,18 +118,18 @@
           </div>
         </div>
 
-        <div id="contact-container-right" class="w-1/2 h-full bg-teal-100 rounded-4xl p-8">
+        <div id="contact-container-right" class="w-1/2 h-full bg-teal-700 rounded-4xl p-8">
           <form id="contactform" action="/submit" method="POST">
-            <label for="name" class="mb-2 block">Name:</label>
+            <label for="name" class="mb-2 block font-semibold text-white tracking-wider text-lg">Name:</label>
             <input type="text" name="name" id="name" placeholder="Enter your name..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-6">
 
-            <label for="email" class="mb-2 block">Email:</label>
+            <label for="email" class="mb-2 block font-semibold text-white tracking-wider text-lg">Email:</label>
             <input type="email" name="email" id="email" placeholder="Enter your email..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-6">
 
-            <label for="message" class="mb-2 block">Your Message:</label>
+            <label for="message" class="mb-2 block font-semibold text-white tracking-wider text-lg">Your Message:</label>
             <textarea id="message" name="message" rows="9" placeholder="Type your message here..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-6"></textarea>
 
-            <button type="submit" class="bg-white py-2 px-4 rounded-2xl sha-md nav-link">Submit</button>
+            <button type="submit" class="bg-white py-2 px-4 rounded-2xl sha-md nav-link font-bold tracking-wider">Submit</button>
           </form>
         </div>
       </div>

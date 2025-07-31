@@ -59,9 +59,10 @@
 }
 
 .gradient-background {
-  background: linear-gradient(114deg,#ffe5b4,#ffffff,#ccfbf1);
+  background: linear-gradient(140deg,#ffd78e,#ffffff,#91ffe7);
+  /* #ccfbf1 */
   background-size: 180% 180%;
-  animation: gradient-animation 9s ease infinite;
+  animation: gradient-animation 5s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -78,6 +79,7 @@
 
 .gradient-background-2 {
   background: linear-gradient(114deg,#fed7aa,#fef9c3,#99f6e4);
+  /* #99f6e4 */
   background-size: 180% 180%;
   animation: gradient-animation 9s ease infinite;
 }
@@ -107,4 +109,8 @@
 
 .contact-link:hover {
   @apply text-orange-500 tracking-wide;
+}
+
+.form-label{
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

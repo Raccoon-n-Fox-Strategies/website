@@ -187,6 +187,9 @@
   .fixed {
     position: fixed;
   }
+  .static {
+    position: static;
+  }
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
@@ -418,6 +421,10 @@
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
   }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -539,9 +546,9 @@
   }
 }
 .gradient-background {
-  background: linear-gradient(114deg,#ffe5b4,#ffffff,#ccfbf1);
+  background: linear-gradient(140deg,#ffd78e,#ffffff,#91ffe7);
   background-size: 180% 180%;
-  animation: gradient-animation 9s ease infinite;
+  animation: gradient-animation 5s ease infinite;
 }
 @keyframes gradient-animation {
   0% {
@@ -583,6 +590,9 @@
   --tw-tracking: var(--tracking-wide);
   letter-spacing: var(--tracking-wide);
   color: var(--color-orange-500);
+}
+.form-label {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 @property --tw-translate-x {
   syntax: "*";

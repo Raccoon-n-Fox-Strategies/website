@@ -9,7 +9,7 @@
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./style.css -o ./output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./public/style.css -o ./public/output.css --watch",
     "start": "node index.js",
     "start:dev": "nodemon index.js"
   },

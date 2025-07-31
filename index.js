@@ -39,7 +39,7 @@ app.post('/submit', async (req, res) => {
             address: "rnf.strategies@gmail.com"
         },
         to: "rnf.strategies@gmail.com",
-        subject: "Sent from XPLORE website",
+        subject: "Sent from RnF website",
         text: `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
     };
     const confirmationMail = {
