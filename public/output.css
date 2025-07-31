@@ -280,6 +280,9 @@
   .w-\[60rem\] {
     width: 60rem;
   }
+  .w-\[90vh\] {
+    width: 90vh;
+  }
   .w-fit {
     width: fit-content;
   }
