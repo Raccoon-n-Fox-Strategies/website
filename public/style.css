@@ -16,17 +16,23 @@
 }
 
 .nav-link{
-  @apply border-2 border-black rounded-xl py-3 sm:py-1.5 text-center cursor-pointer duration-100 bg-white px-3 sm:px-4 tracking-wider;
+  @apply border-2 border-black rounded-xl py-1.5 text-center cursor-pointer duration-100 bg-white px-3 sm:px-4 tracking-wider;
 }
-.nav-link:hover{
+.m-nav-link{
+  @apply border-2 border-black rounded-xl py-2 text-center cursor-pointer duration-100 bg-white px-8 font-semibold tracking-wider;
+}
+.m-nav-button{
+  @apply border-2 border-black rounded-xl cursor-pointer duration-100 bg-white;
+}
+.nav-link:hover, .m-nav-link:hover, .m-nav-button:hover{
   @apply bg-orange-200;
 }
-.nav-link:active{
+.nav-link:active, .m-nav-link:active, .m-nav-button:active{
   @apply shadow-[0_1px_0_rgba(0,0,0,1)] translate-y-[3px];
 }
 
 .main-card{
-  @apply h-screen w-screen pt-[17vh] px-12;
+  @apply sm:h-screen w-screen px-5 sm:px-12 sm:pt-[17vh];
 }
 
 #home-container-right{
@@ -41,10 +47,10 @@
     box-shadow: 0 2px 0 rgba(0, 0, 0, 1);
   }
   8% {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 0 rgba(0, 0, 0, 1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 0 rgba(0, 0, 0, 1);
   }
-  25% {
+  20% {
     transform: translateY(0px);
     box-shadow: 0 8px 0 rgba(0, 0, 0, 1);
   }
@@ -58,30 +64,14 @@
   }
 }
 
+#about-container-left-img{
+  animation: bouncer 4s infinite;
+}
+
 .gradient-background {
   background: linear-gradient(140deg,#ffd78e,#ffffff,#91ffe7);
-  /* #ccfbf1 */
   background-size: 180% 180%;
   animation: gradient-animation 5s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.gradient-background-2 {
-  background: linear-gradient(114deg,#fed7aa,#fef9c3,#99f6e4);
-  /* #99f6e4 */
-  background-size: 180% 180%;
-  animation: gradient-animation 9s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -124,4 +114,19 @@
   background-image: url(./assets/images/ishan-photo.jpg);
   background-position: center;
   background-size: cover;
+}
+
+#mobile-nav-sidebar{
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 200ms;
+}
+#sidebar-main {
+  transform: translateX(-100%);
+  transition: transform 200ms;
+}
+#mobile-nav-sidebar.mnav-open{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#mobile-nav-sidebar.mnav-open > #sidebar-main {
+  transform: translateX(0);
 }

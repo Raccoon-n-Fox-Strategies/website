@@ -10,18 +10,17 @@
 
   <title>RnF Strategies</title>
   <link rel="stylesheet" href="./output.css">
-
   <link rel="icon" href="./assets/images/Rnf_logo.png" />
 </head>
 <body class="font-mono">
   <header>
-    <nav class="fixed left-8 sm:left-12 right-8 sm:right-12 top-6 mx-auto flex items-center rounded-4xl justify-between py-4 px-5 sm:px-10 font-bold sha-lg bg-teal-100 z-50">
-      <a id="logo" class="hidden lg:flex items-center gap-2 text-2xl tracking-wide" href="#home">
-        <img src="./assets/images/Rnf_logo.png" alt="Our Logo" class="w-10">
-        Raccoon n' Fox Strategies
+    <nav id="pc-nav" class="hidden fixed left-8 sm:left-12 right-8 sm:right-12 top-6 mx-auto sm:flex items-center rounded-4xl justify-between p-4 lg:gap-0 font-bold sha-lg bg-teal-100 z-50">
+      <a id="logo" class="hidden sm:flex items-center gap-2 text-2xl tracking-wide" href="#home">
+        <img src="./assets/images/Rnf_logo.png" alt="Our Logo" class="min-w-12 max-w-12">
+        <span class="hidden lg:inline">Raccoon n' Fox Strategies</span>
       </a>
       
-      <div id="links" class="flex items-center lg:gap-5 justify-between lg:justify-start w-full lg:w-fit">
+      <div id="links" class="flex items-center max-w-[35rem] lg:gap-5 justify-between lg:justify-start w-full lg:w-fit">
         <a href="#home" class="nav-link sha-md">Home</a>
         <a href="#about" class="nav-link sha-md">About</a>
         <a href="#services" class="nav-link sha-md">Services</a>
@@ -29,110 +28,136 @@
         <a href="#contact" class="nav-link sha-md">Contact</a>
       </div>
     </nav>
+
+    <nav id="mobile-nav" class="sm:hidden fixed bg-teal-100 py-3 px-5 w-full sha-lg rounded-b-2xl flex justify-between items-center z-50">
+      <img src="./assets/images/Rnf_logo.png" alt="Our Logo" class="w-13">
+
+      <button class="sha-md py-2 px-[0.05rem] rounded-xl m-nav-button">
+        <i id="hamburger" class="fa-solid fa-bars fa-2xl"></i>
+      </button>
+    </nav>
+
+    <nav id="mobile-nav-sidebar" class="hidden sm:hidden fixed z-100 w-screen">
+      <div id="sidebar-main" class="bg-teal-100 h-screen w-[50vw] p-5 sha-lg rounded-r-4xl gap-3 flex flex-col z-102">
+        <div class="flex justify-end h-10 items-center"> 
+          <button class="sha-md py-2 rounded-xl m-nav-button">
+            <i id="cross-button" class="fa-solid fa-xmark fa-2xl"></i>
+          </button>
+        </div>
+        
+        <div class="flex flex-col gap-2">
+          <a href="#home" class="m-nav-link sha-md">Home</a>
+          <a href="#about" class="m-nav-link sha-md">About</a>
+          <a href="#services" class="m-nav-link sha-md">Services</a>
+          <a href="#team" class="m-nav-link sha-md">Team</a>
+          <a href="#contact" class="m-nav-link sha-md">Contact</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section id="home" class="main-card">
-      <div id="home-container" class="sha-lg flex rounded-4xl justify-between h-[70vh] bg-teal-100">
-        <div id="home-container-left" class="p-8 pt-6 border-2 h-fit my-auto mx-12 sha-md rounded-2xl bg-white flex flex-col justify-between">
-          <p class="text-[3rem] font-semibold">Grow Your Online Presence</p>
-          <p class="text-[1.2rem] mt-2">With us, at Raccoon n' Fox Strategies</p>
-          <a href="#services" id="home-cta" class="sha-md py-2 px-4 block w-fit mt-4 rounded-xl duration-100 cursor-pointer font-bold nav-link">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+    <section id="home" class="main-card pt-27">
+      <div id="home-container" class="sha-lg flex flex-col-reverse sm:flex-row rounded-4xl justify-between sm:h-[70vh] bg-teal-100">
+        <div id="home-container-left" class="p-5 sm:p-8 pt-4 sm:pt-6 border-2 h-fit my-5 sm:my-auto mx-5 sm:mx-12 sha-md rounded-2xl bg-white flex flex-col justify-between">
+          <p class="text-[1.5rem] sm:text-[3rem] font-semibold text-center sm:text-left">Grow Your Online Presence</p>
+          <p class="text-[1rem] sm:text-[1.2rem] mt-1 sm:mt-2 text-center sm:text-left">With us, at Raccoon n' Fox Strategies</p>
+          <a href="#services" id="home-cta" class="sha-md px-4 block w-full sm:w-fit mt-3 sm:mt-4 rounded-xl duration-100 cursor-pointer font-bold nav-link">Our Services <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         
-        <div id="home-container-right" class="h-full w-[50rem] rounded-r-4xl"></div>
+        <div id="home-container-right" class="h-[15rem] sm:h-full sm:w-[50rem] rounded-t-4xl sm:rounded-r-4xl"></div>
       </div>
     </section>
 
-    <section id="about" class="main-card">
-      <div id="about-container" class="h-[70vh] w-full border-2 flex sha-lg rounded-4xl bg-teal-100">
-        <div id="about-container-left" class="w-[40%] h-full bg-teal-700 rounded-l-4xl flex justify-center items-center">
-          <div id="about-container-left-img" class="w-100 h-100 rounded-[50%] -translate-y-3 sha-xl bg-white"></div>
+    <section id="about" class="main-card pt-26">
+      <div id="about-container" class="sm:h-[70vh] w-full border-2 flex flex-col sm:flex-row sha-lg rounded-4xl bg-teal-100">
+        <div id="about-container-left" class="w-full sm:w-[40%] h-full bg-teal-700 rounded-t-4xl sm:rounded-l-4xl flex justify-center items-center">
+          <div id="about-container-left-img" class="mt-6 mb-4 sm:mt-0 sm:mb-0 w-[50vw] h-[50vw] sm:w-100 sm:h-100 rounded-[50%] -translate-y-3 sha-xl bg-white"></div>
         </div>
 
-        <div id="about-container-right" class="w-[60%] h-full flex items-center p-8">
-          <div id="about-container-right-text" class="bg-white sha-lg rounded-2xl p-8">
-            <p id="about-container-right-text-title" class="text-5xl mb-4 font-semibold">About Us</p>
+        <div id="about-container-right" class="w-full sm:w-[60%] sm:h-full flex items-center p-5 sm:p-8">
+          <div id="about-container-right-text" class="bg-white sha-lg rounded-2xl p-5 sm:p-8">
+            <p id="about-container-right-text-title" class="text-[1.5rem] sm:text-5xl mb-4 font-semibold">About Us</p>
 
-            <p id="about-container-right-text-desc">Born from a shared obsession with creativity, fast machines, and great food, Raccoon n' Fox Strategies was founded by two entrepreneurs with a simple goal: <span class="font-semibold tracking-wide">help brands break through the noise online and drive real results.</span><br><br>We specialize in turning scrolls into clicks and clicks into customers, because we understand what makes today’s audiences pause, pay attention, and purchase.<br><br>Let’s unlock the digital gold that’s waiting for your brand.<br>Reach out now! We’ll show you how it’s done.<br><br>P.S. We knew you'd read this far 😉 That’s the power of curiosity-led copy.</p>
+            <p id="about-container-right-text-desc" class="text-[0.8rem] sm:text-[1rem]">Born from a shared obsession with creativity, fast machines, and great food, Raccoon n' Fox Strategies was founded by two entrepreneurs with a simple goal: <span class="font-semibold tracking-wide">help brands break through the noise online and drive real results.</span><br><br>We specialize in turning scrolls into clicks and clicks into customers, because we understand what makes today’s audiences pause, pay attention, and purchase.<br><br>Let’s unlock the digital gold that’s waiting for your brand.<br>Reach out now! We’ll show you how it’s done.<br><br>P.S. We knew you'd read this far 😉 That’s the power of curiosity-led copy.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="main-card">
-      <div id="services-container" class="w-full h-[70vh] flex justify-center gap-10">
-        <div id="services-copywriting" class="h-full w-[30rem] sha-lg rounded-4xl p-8 flex flex-col justify-between bg-teal-100">
-          <p class="text-5xl/15 font-semibold text-center sha-md rounded-2xl bg-white p-2">Copywriting for Meta Ads</p>
+    <section id="services" class="main-card pt-26">
+      <div id="services-container" class="w-full sm:h-[70vh] flex flex-col sm:flex-row justify-center gap-10">
+        <div id="services-copywriting" class="sm:h-full sm:max-w-[30rem] sha-lg rounded-4xl p-5 flex flex-col justify-between bg-teal-100 gap-4 sm:gap-0">
+          <p class="text-[1.5rem] sm:text-5xl/15 font-semibold text-center sha-md rounded-2xl bg-white p-2">Copywriting for Meta Ads</p>
 
-          <p class="text-center text-lg bg-white font-semibold sha-md rounded-2xl p-2">We write scroll-stopping Meta ads that grab attention in seconds. Each line is crafted to spark curiosity and drive clicks. With a deep understanding of platform trends and audience psychology, we turn passive scrollers into active buyers. Boost your ad performance with copy that sells, not just speaks.</p>
+          <p class="text-center text-[0.8rem] sm:text-lg bg-white font-semibold sha-md rounded-2xl p-5 sm:p-2">We write scroll-stopping Meta ads that grab attention in seconds. Each line is crafted to spark curiosity and drive clicks. With a deep understanding of platform trends and audience psychology, we turn passive scrollers into active buyers. Boost your ad performance with copy that sells, not just speaks.</p>
 
           <a href="#contact" id="copywriting-quote" class="bg-gray-700 text-white py-2.5 w-full sha-md block rounded-2xl text-xl font-semibold text-center cursor-pointer hover:bg-gray-600 hover:tracking-wide transition-all duration-120">Get a Quote</a>
         </div>
 
-        <div id="services-landingpage" class="h-full w-[30rem] bg-orange-100 sha-lg rounded-4xl p-8 flex flex-col justify-between">
-          <p class="text-5xl/15 font-semibold text-center sha-md rounded-2xl bg-white p-2">Landing Page Creation</p>
+        <div id="services-landingpage" class="sm:h-full sm:max-w-[30rem] bg-orange-100 sha-lg rounded-4xl p-5 flex flex-col justify-between gap-4 sm:gap-0">
+          <p class="text-[1.5rem] sm:text-5xl/15 font-semibold text-center sha-md rounded-2xl bg-white p-2">Landing Page Creation</p>
 
-          <p class="text-center text-lg bg-white font-semibold sha-md rounded-2xl p-2">We design landing pages that turn visitors into customers. Every element: from headlines to call-to-action is built for clarity, persuasion, and conversion. With a focus on user experience and brand consistency, we guide users smoothly to the goal. Get landing pages that don’t just look good, they perform.</p>
+          <p class="text-center text-[0.8rem] sm:text-lg bg-white font-semibold sha-md rounded-2xl p-5 sm:p-2">We design landing pages that turn visitors into customers. Every element: from headlines to call-to-action is built for clarity, persuasion, and conversion. With a focus on user experience and brand consistency, we guide users smoothly to the goal. Get landing pages that don’t just look good, they perform.</p>
 
           <a href="#contact" id="landingpage-quote" class="bg-gray-700 text-white py-2.5 w-full sha-md block rounded-2xl text-xl font-semibold text-center cursor-pointer hover:bg-gray-600 hover:tracking-wide transition-all duration-120">Get a Quote</a>
         </div>
       </div>
     </section>
 
-    <section id="team" class="main-card">
-      <div id="team-container" class="h-[70vh] flex flex-col justify-between">
-        <div id="team-container-varun" class="sha-lg p-8 rounded-4xl h-[47%] bg-teal-100 flex justify-between items-center">
-          <div id="varun-img" class="sha-lg h-full w-55 rounded-[50%] bg-white"></div>
+    <section id="team" class="main-card pt-26">
+      <div id="team-container" class="gap-6 sm:gap-0 sm:h-[70vh] flex flex-col justify-between">
+        <div id="team-container-varun" class="sha-lg p-5 sm:p-8 rounded-4xl h-[47%] bg-teal-100 gap-3 flex flex-col sm:flex-row justify-between items-center">
+          <div id="varun-img" class="sha-lg h-[10rem] w-[10rem] sm:h-full sm:w-55 rounded-2xl sm:rounded-[50%] bg-white"></div>
 
-          <div id="varun-desc" class="sha-lg rounded-4xl w-[60rem] h-full bg-white p-8">I, Varun Satapathy, am a simple guy with a simple vision: freedom to go anywhere around the world, no strings attached. I was raised in a family of techies. I got really good at being a techie too! But during my first years of college, my passion for sales and the art of persuasion came to light. With a LOT of effort, I finally convinced my roommate to start an agency with me. Do connect with me on any of my social links for any reason you may have: queries, business or even if you just want to be friends!</div>
+          <div id="varun-desc" class="sha-lg rounded-2xl sm:rounded-4xl text-[0.8rem] sm:text-[1rem] sm:w-[60rem] h-full bg-white p-5 sm:p-8">I, Varun Satapathy, am a simple guy with a simple vision: freedom to go anywhere around the world, no strings attached. I was raised in a family of techies. I got really good at being a techie too! But during my first years of college, my passion for sales and the art of persuasion came to light. With a LOT of effort, I finally convinced my roommate to start an agency with me. Do connect with me on any of my social links for any reason you may have: queries, business or even if you just want to be friends!</div>
 
-          <div id="varun-links" class="flex flex-col p-8 justify-between items-center sha-lg rounded-4xl h-full w-30 bg-white">
-            <a href="https://www.instagram.com/thevalidusername/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="https://github.com/VeyronShark" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-            <a href="" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-            <a href="mailto:varun.satapathy@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+          <div id="varun-links" class="flex sm:flex-col p-5 sm:p-8 justify-between items-center sha-lg rounded-2xl sm:rounded-4xl sm:h-full w-full sm:w-30 bg-white">
+            <a href="https://www.instagram.com/thevalidusername/" target="_blank"><i class="fa-brands fa-instagram fa-xl sm:fa-2xl"></i></a>
+            <a href="https://github.com/VeyronShark" target="_blank"><i class="fa-brands fa-github fa-xl sm:fa-2xl"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-linkedin fa-xl sm:fa-2xl"></i></a>
+            <a href="mailto:varun.satapathy@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-xl sm:fa-2xl"></i></a>
           </div>
         </div>
 
-        <div id="team-container-ishan" class="sha-lg p-8 rounded-4xl h-[47%] bg-teal-100 flex justify-between items-center">
-          <div id="ishan-links" class="flex flex-col p-8 justify-between items-center sha-lg rounded-4xl h-full w-30 bg-white">
-            <a href="https://www.instagram.com/ishan_roy31/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="https://github.com/RADXIshan" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-            <a href="https://www.linkedin.com/in/ishanroy-radx" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-            <a href="mailto:ishanroy3118107@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+        <div id="team-container-ishan" class="sha-lg p-5 sm:p-8 rounded-4xl h-[47%] bg-teal-100 gap-3 flex flex-col-reverse sm:flex-row justify-between items-center">
+          <div id="ishan-links" class="flex sm:flex-col p-5 sm:p-8 justify-between items-center sha-lg rounded-2xl sm:rounded-4xl sm:h-full w-full sm:w-30 bg-white">
+            <a href="https://www.instagram.com/ishan_roy31/" target="_blank"><i class="fa-brands fa-instagram fa-xl sm:fa-2xl"></i></a>
+            <a href="https://github.com/RADXIshan" target="_blank"><i class="fa-brands fa-github fa-xl sm:fa-2xl"></i></a>
+            <a href="https://www.linkedin.com/in/ishanroy-radx" target="_blank"><i class="fa-brands fa-linkedin fa-xl sm:fa-2xl"></i></a>
+            <a href="mailto:ishanroy3118107@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-xl sm:fa-2xl"></i></a>
           </div>
 
-          <div id="ishan-desc" class="sha-lg rounded-4xl w-[60rem] h-full bg-white p-8">Hey guys, I'm Ishan Roy. I'm a web designer and developer. I have a great interest in sports(especially football), business and webdev. I got into webdev during my first year of college and I've been hooked ever since! Everyday I learn new technologies and new skills.<br><br>P.S. It DID NOT take a lot of effort to convince me to form an agency. It just took one sentence, he's exaggerating I promise.</div>
+          <div id="ishan-desc" class="sha-lg rounded-2xl sm:rounded-4xl text-[0.8rem] sm:text-[1rem] sm:w-[60rem] h-full bg-white p-5 sm:p-8">Hey guys, I'm Ishan Roy. I'm a web designer and developer. I have a great interest in sports(especially football), business and webdev. I got into webdev during my first year of college and I've been hooked ever since! Everyday I learn new technologies and new skills.<br><br>P.S. It DID NOT take a lot of effort to convince me to form an agency. It just took one sentence, he's exaggerating I promise.</div>
 
-          <div id="ishan-img" class="sha-lg h-full w-55 rounded-[50%] bg-white"></div>
+          <div id="ishan-img" class="sha-lg h-[10rem] w-[10rem] sm:h-full sm:w-55 rounded-2xl sm:rounded-[50%] bg-white"></div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="main-card">
-      <div id="contact-container" class="h-[70vh] border-2 w-full sha-lg rounded-4xl bg-teal-100 flex">
-        <div id="contact-container-left" class="w-1/2 h-full p-8 flex flex-col justify-center">
-          <div id="contact-container-left-text" class="sha-lg rounded-2xl p-8 bg-white">
-            <p class="text-5xl font-bold mb-6">Contact Us</p>
-            <p class="text-lg font-semibold mb-2">Ph: <a href="tel:+919008663018" class="contact-link duration-150">+91 9008663018</a> / <a href="tel:+919007195462" class="contact-link duration-150">+91 9007195462</a> <i class="fa-solid fa-phone"></i></p>
-            <p class="text-lg font-semibold mb-4">Email: <a href="mailto:rnf.strategies@gmail.com" class="contact-link duration-150">rnf.strategies@gmail.com</a> <i class="fa-solid fa-envelope"></i></p>
-            <p class="text-lg font-semibold">Please contact us regarding any query you may have. Be it personal or business-related. We are happy to help!</p>
+    <section id="contact" class="main-card pt-26 pb-12">
+      <div id="contact-container" class="flex-col sm:flex-row sm:h-[70vh] border-2 w-full sha-lg rounded-4xl bg-teal-100 flex">
+        <div id="contact-container-left" class="sm:w-1/2 h-full p-5 sm:p-8 flex flex-col justify-center">
+          <div id="contact-container-left-text" class="sha-lg rounded-2xl p-5 sm:p-8 bg-white">
+            <p class="text-[1.5rem] text-center sm:text-left sm:text-5xl font-bold mb-4">Contact Us</p>
+            <p class="text-[0.8rem] sm:text-lg font-semibold mb-2">Ph: <a href="tel:+919008663018" class="contact-link duration-150">+91 9008663018</a> / <a href="tel:+919007195462" class="contact-link duration-150">+91 9007195462</a> <i class="fa-solid fa-phone"></i></p>
+            <p class="text-[0.8rem] sm:text-lg font-semibold mb-4">Email: <a href="mailto:rnf.strategies@gmail.com" class="contact-link duration-150">rnf.strategies@gmail.com</a> <i class="fa-solid fa-envelope"></i></p>
+            <p class="text-[0.8rem] sm:text-lg font-semibold">Please contact us regarding any query you may have. Be it personal or business-related. We are happy to help!</p>
           </div>
         </div>
 
-        <div id="contact-container-right" class="w-1/2 h-full bg-teal-700 rounded-4xl p-8">
+        <div id="contact-container-right" class="sm:w-1/2 h-full bg-teal-700 rounded-4xl p-5 sm:p-8">
           <form id="contactform" action="/submit" method="POST">
-            <label for="name" class="mb-2 block font-semibold text-white tracking-wider text-lg">Name:</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-6">
+            <label for="name" class="mb-2 block font-semibold text-white tracking-wider text-[1rem] sm:text-lg">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-3 sm:mb-5 text-[0.8rem] sm:text-lg">
 
-            <label for="email" class="mb-2 block font-semibold text-white tracking-wider text-lg">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Enter your email..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-6">
+            <label for="email" class="mb-2 block font-semibold text-white tracking-wider text-[1rem] sm:text-lg">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-3 sm:mb-5 text-[0.8rem] sm:text-lg">
 
-            <label for="message" class="mb-2 block font-semibold text-white tracking-wider text-lg">Your Message:</label>
-            <textarea id="message" name="message" rows="7" placeholder="Type your message here..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-6"></textarea>
+            <label for="message" class="mb-2 block font-semibold text-white tracking-wider text-[1rem] sm:text-lg">Your Message:</label>
+            <textarea id="message" name="message" rows="7" placeholder="Type your message here..." class="w-full bg-white sha-md rounded-2xl py-2 px-4 mb-3 sm:mb-5 text-[0.8rem] sm:text-lg"></textarea>
 
-            <button type="submit" class="bg-white py-2 px-4 rounded-2xl sha-md nav-link font-bold tracking-wider">Submit</button>
+            <button type="submit" class="bg-white py-2 px-4 w-full sm:w-fit rounded-2xl sha-md nav-link font-bold tracking-wider">Submit</button>
           </form>
         </div>
       </div>
@@ -142,5 +167,7 @@
   <footer>
 
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
